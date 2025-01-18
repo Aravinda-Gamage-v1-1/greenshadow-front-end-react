@@ -1,0 +1,45 @@
+.image-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures content doesn't overflow the container */
+    border-radius: 10px; /* Ensures consistent rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Keeps the image proportional */
+    border-radius: 10px; /* Matches the container's rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* New Field Button */
+.new-field-btn {
+    background-color: rgba(138, 211, 141, 0.46);
+    box-shadow: 0 4px 8px rgba(60, 64, 67, 0.15); /* Unified shadow style */
+    color: #274D40;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-field-btn:hover {
+    background-color: #adbf99; /* Subtle darker green shade */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(60, 64, 67, 0.3); /* Enhanced shadow on hover */
+}
+

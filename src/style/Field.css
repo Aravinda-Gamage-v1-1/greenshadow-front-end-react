@@ -1,0 +1,201 @@
+/* Custom Styles for Glass Search Bar */
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background: rgba(255, 215, 0, 0.2); /* Slightly transparent gold */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 10px 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 40px; /* Space for the search icon */
+    background: transparent; /* Matches the parent container */
+    color: #333;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.search-bar input:focus {
+    background: rgba(255, 255, 255, 0.2); /* Softer highlight */
+    color: #111;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+    color: #274D40;
+}
+
+/* Glass Container Styles */
+.item-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    width: 100%;
+    max-height: 650px;
+    overflow-y: auto;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+/* Placeholder text when empty */
+.empty-message {
+    font-size: 1.2em;
+    color: #888;
+    text-align: center;
+}
+
+.no-data-img {
+    opacity: 0.8;
+}
+
+.no-data img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Card Styles */
+.card-custom {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: #333;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.slider img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-button {
+    background: rgba(255, 216, 118, 0.25);
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Add Field Button */
+.add-filed {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    background: rgba(242, 215, 182, 0.63);
+    color: #274D40;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-filed:hover {
+    background-color: #8ad38d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.add-btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Modal Styles */
+.custom-modal-background,
+.add-modal-custom {
+    background-color: #FAF5E6;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-container button,
+.btn button {
+    background-color: rgba(248, 208, 87, 0.66);
+    width: 120px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-container button:hover,
+.btn button:hover {
+    background-color: #f5b900;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Styling */
+#map {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}

@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #81BFDA, #4F8FBD); /* Gradient background */
+    border-right: 1px solid #ddd;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header img {
+    width: 80%; /* Slightly smaller for a modern feel */
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px; /* Rounded edges for the image */
+}
+
+.sidebar ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.sidebar ul li span {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FAF5E6;
+    border-radius: 8px; /* Rounded edges */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar ul li span:hover {
+    background: #FADA7A;
+    color: #274D40;
+    transform: scale(1.05); /* Subtle zoom effect */
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Navigation Bar */
+.custom-nav {
+    margin-left: 250px;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    margin-top: 30px;
+    /* display: flex;
+    gap: 15px;
+    flex-wrap: wrap; */
+}
+
+.chart-cards {
+    margin-top: 50px;
+}
+
+.dashboard-topic {
+    font-weight: bolder;
+    color: #274D40;
+    font-size: 1.8rem;
+    /* margin-bottom: 15px; */
+}
+
+/* Glass Card */
+.glass-card {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(39, 77, 64, 0.2)); /* Modern gradient */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadows */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.25); /* Enhanced hover shadow */
+}
+
+.glass-card .card-title, 
+.glass-card .card-text {
+    color: #274D40; /* Natural green tone for text */
+}
+
+/* Profile and Menu Icons */
+.profile-icon i, .menu-toggle i {
+    font-size: 24px;
+    color: #274D40;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profile-icon i:hover, .menu-toggle i:hover {
+    color: #81BFDA;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+        display: block !important;
+        z-index: 1000;
+        top: 61px;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .top-navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: #f7f7f7;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    .dashboard-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
