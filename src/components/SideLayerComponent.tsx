@@ -19,7 +19,7 @@ export default function sideLayerComponent({open}){
                         className="fas fa-tachometer-alt"></i> Dashboard</span></Link>
                     </li>
                     <li><span id="nav-logs"><i className="fas fa-book-open"></i> Monitoring Logs</span></li>
-                    <li><span id="nav-crop"><i className="fas fa-seedling"></i> Crops Management</span></li>
+                    <li><Link to={'/crop'}><span id="nav-crop"><i className="fas fa-seedling"></i> Crops Management</span></Link></li>
                     <li><Link to={'/field'}><span id="nav-field"><i className="fas fa-leaf"></i> Field Management</span></Link></li>
                     <li><span id="nav-staff"><i className="fas fa-users"></i> Staff</span></li>
                     <li><span id="nav-vehicles"><i className="fas fa-truck"></i> Vehicles</span></li>

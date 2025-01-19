@@ -43,3 +43,21 @@
     box-shadow: 0 6px 12px rgba(60, 64, 67, 0.3); /* Enhanced shadow on hover */
 }
 
+.img-fluid {
+    width: 80%;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.modal-title {
+    font-weight: bolder
+}
+
+.img-preview {
+    display: none
+}
+
+.btn {
+    display: none
+}

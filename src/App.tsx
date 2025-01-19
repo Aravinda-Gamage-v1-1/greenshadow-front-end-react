@@ -7,6 +7,7 @@ import SignUpPage from "./pages/SignUpPage.tsx";
 import {MainLayout} from "./components/MainLayout.tsx";
 import DashboardPage from "./pages/DashboardPage.tsx";
 import FieldPage from "./pages/FieldPage.tsx";
+import CropPage from "./pages/CropPage.tsx";
 
 function App() {
     const routes = createBrowserRouter(
@@ -24,7 +25,7 @@ function App() {
                 element:<MainLayout/>,
                 children:[
                     { path: "dashboard", element: <DashboardPage /> },
-                    // { path: "crop", element: <CropsPage /> },
+                    { path: "crop", element: <CropPage /> },
                     // { path: "staff", element: <StaffPage /> },
                     { path: "field", element: <FieldPage /> },
                     // { path: "logs", element: <LogsPage /> },

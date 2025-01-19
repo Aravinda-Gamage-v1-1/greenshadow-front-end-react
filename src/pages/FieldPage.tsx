@@ -2,6 +2,10 @@ import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import '../style/Field.css'
 import MainContainer from "../components/MainContainer.tsx";
+import AddButton from "../components/AddButton.tsx";
+import AddFieldModal from "../components/FieldComponent/AddFieldModal.tsx"
+import {Field} from "../models/Field.ts";
+import {deleteField} from "../store/slices/FieldSlice.ts";
 
 export default function FieldPage() {
     return (
@@ -11,14 +15,14 @@ export default function FieldPage() {
                 {/*    <i class="fas fa-search "></i>*/}
                 {/*  <input id="fieldSearch" type="text" placeholder="Search field names...">*/}
                 {/*</div>*/}
-                {/*container of fields*/}
-                <MainContainer dataArray={} renderItem={} noDataMessage={"No"} displayType={"card"}/>
-                {/*<div id="field-container" className="item-container container">*/}
-                {/*    <div className="no-data">*/}
-                {/*        <img src="src/assets/img/noData.png" className="no-data-img" alt="Something wrong"/>*/}
-                {/*        <p className="empty-message">No fields available to display</p>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                {/*<MainContainer dataArray={"fields"} renderItem={field: "Field", index: 4} noDataMessage={"No"} displayType={"card"}/>*/}
+                <div id="field-container" className="item-container container">
+                    <div className="no-data">
+                        <img src="src/assets/img/noData.png" className="no-data-img" alt="Something wrong"/>
+                        <p className="empty-message">No fields available to display</p>
+                    </div>
+                </div>
+                {/*<AddButton text={"Add Field"} onClick={openModal}/>*/}
                 <div className="add-btn-container">
                     <button
                         id="add-field"
